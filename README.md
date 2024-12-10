@@ -1,6 +1,8 @@
 # MIDI-to-Arduino
 
-This is a simple Python script that converts a MIDI file into an Arduino sketch that plays the MIDI file on a piezo buzzer.
+![Header Image](midi-to-arduino.png)
+
+This is a simple Python script that converts a MIDI file into an Arduino sketch that plays the MIDI file on a Piezo buzzer. This was made originally for a school project, but I decided to make it public for anyone who wants to use it.
 
 ## Usage
 
