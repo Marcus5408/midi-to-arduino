@@ -8,6 +8,10 @@ Uses a void-type function to buzz,
 playing out a melody.
 */
 
+// Set up the melody array.
+// Each row contains a frequency, duration, and velocity.
+// The melody array tends to be too large to fit in SRAM,
+// so it is stored in PROGMEM instead.
 const PROGMEM int melody[2464][3] = {
 };
 int passBuzzer = 9;
@@ -29,13 +33,19 @@ void buzz(int frequency, int duration, int velocity) {
   analogWrite(passBuzzer, 0);
 }
 
+// Calculate the length of the melody array
+int melodyLength = sizeof melody / sizeof melody[0];
 void loop() {
-  int melodyLength = sizeof melody / sizeof melody[0];
+  // Iterate through the melody array
   for (int i = 0; i < melodyLength; i++) {
+    // Read the frequency, duration, and velocity from the melody array.
+    // Because the melody array is stored in PROGMEM, we use pgm_read_word
+    // to read the values.
     int frequency = pgm_read_word(&melody[i][0]);
     long duration = pgm_read_word(&melody[i][1]);
     int velocity = pgm_read_word(&melody[i][2]);
 
+    // Debug print the frequency, duration, and velocity
     Serial.print("Frequency: ");
     Serial.print(frequency);
     Serial.print(" Duration: ");
@@ -43,7 +53,9 @@ void loop() {
     Serial.print(" Velocity: ");
     Serial.println(velocity);
 
+    // Play the note
     buzz(frequency, duration, velocity);
   }
+  // Restart the melody after a 3 second delay
   delay(3000);
 }
