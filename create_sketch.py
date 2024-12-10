@@ -53,6 +53,3 @@ def modify_melody(file_path, new_melody):
                     )
             else:
                 file.write(line)
-
-        # Write the real code at the end of the file
-        file.write(real_code)
