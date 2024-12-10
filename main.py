@@ -5,8 +5,8 @@ from extract_notes import midi_to_arduino_data
 
 def main():
     # Paths to the files
-    midi_file_path = os.path.join(os.path.dirname(__file__), "Senbonzakura.mid")
-    ino_file_path = os.path.join(os.path.dirname(__file__), "playMelody.ino")
+    midi_file_path = os.path.join(os.path.dirname(__file__), "midi", "Senbonzakura.mid")
+    ino_file_path = os.path.join(os.path.dirname(__file__), "playMelody", "playMelody.ino")
     output_file_path = os.path.join(os.path.dirname(__file__), "notedata.txt")
 
     # Extract notes from MIDI file and save to output file
