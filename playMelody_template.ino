@@ -8,6 +8,8 @@ Uses a void-type function to buzz,
 playing out a melody.
 */
 
+#include "notes.h"
+
 // Set up the melody array.
 // Each row contains a frequency, duration, and velocity.
 // The melody array tends to be too large to fit in SRAM,
