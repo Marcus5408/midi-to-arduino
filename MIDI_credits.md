@@ -21,3 +21,6 @@
 - **File Name:** rolled.mid
   - **MuseScore Link:** [Never Gonna Give You Up (Alto Saxophone)](https://musescore.com/user/26643386/scores/4879546)
   - **Score Author:** Chlorondria_V
+- **File Name:** coffinNails.mid
+  - **MuseScore Link:** [Coffin nails – MF DOOM (Trumpet))](https://musescore.com/user/71912806/scores/12392149)
+  - **Score Author:** boominggaming
