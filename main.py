@@ -5,7 +5,7 @@ from extract_notes import midi_to_arduino_data
 
 def main():
     # Paths to the files
-    midi_file_path = os.path.join(os.path.dirname(__file__), "midi", "rolled.mid")
+    midi_file_path = os.path.join(os.path.dirname(__file__), "midi", "Senbonzakura.mid")
     ino_file_path = os.path.join(
         os.path.dirname(__file__), "playMelody", "playMelody.ino"
     )
