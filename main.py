@@ -9,10 +9,11 @@ def main():
     ino_file_path = os.path.join(
         os.path.dirname(__file__), "playMelody", "playMelody.ino"
     )
+    notes_file_path = os.path.join(os.path.dirname(__file__), "playMelody", "notes.h")
     output_file_path = os.path.join(os.path.dirname(__file__), "notedata.txt")
 
     # Extract notes from MIDI file and save to output file
-    midi_to_arduino_data(midi_file_path, output_file_path)
+    midi_to_arduino_data(midi_file_path, output_file_path, notes_file_path)
 
     # Read the extracted notes
     new_melody = []
@@ -20,7 +21,7 @@ def main():
         lines = file.readlines()
         for line in lines:
             parts = line.strip("{} \n").split(",")
-            note = int(parts[0].strip())
+            note = parts[0].strip()
             duration = int(parts[1].strip())
             velocity = int(parts[2].strip("{} "))
             new_melody.append((note, duration, velocity))
